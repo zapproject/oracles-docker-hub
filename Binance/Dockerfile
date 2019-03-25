@@ -5,8 +5,9 @@ WORKDIR /usr/src/zap
 RUN dnf update -y
 RUN dnf install -y git nodejs npm python gcc-c++
 RUN git clone https://github.com/zapproject/zap-oracle-template.git
+COPY Responder.ts /usr/src/zap/zap-oracle-template/Oracle
+COPY entry_point.sh /usr/
 WORKDIR zap-oracle-template
-COPY Config.json /usr/src/zap/zap-oracle-template/Oracle
-RUN npm install node-binance-api bluebird
 RUN npm install
-CMD ["npm","start"]
+RUN npm install node-binance-api bluebird
+CMD ["sh","/usr/entry_point.sh"]
