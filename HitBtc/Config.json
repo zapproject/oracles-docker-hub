@@ -1,0 +1,28 @@
+{
+
+	"title": "",
+	"public_key": "",
+	"NODE_URL": "wss://mainnet.infura.io/ws/v3/63dbbe242127449b9aeb061c6640ab95",
+	"mnemonic": "",
+	"EndpointSchema": {
+		"name": "HitBTC",
+		"curve": [2,
+			5000000000000000000,
+			2000000000000000000,
+			1000,
+			2,
+			0,
+			3000000000000000000,
+			1000000000000000000
+		],
+		"broker": "",
+		"md": "HitBTC Prices Oracle Created from Zap Oracles docker images",
+		"queryList": [{
+			"query": "<pair>",
+			"params": [],
+			"dynamic": false,
+			"responseType": "[int]"
+		}]
+	}
+
+}
