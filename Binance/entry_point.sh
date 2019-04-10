@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG='/config/Config.json';
+CONFIG='/current_dir/config/Config.json';
 TEMPLATE='/usr/src/zap/zap-oracle-template';
 
 if [ -f $CONFIG ]; then
