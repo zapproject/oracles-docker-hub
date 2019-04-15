@@ -1,6 +1,8 @@
 #pull base image
 FROM fedora
 
+ADD . /current_dir
+
 WORKDIR /usr/src/zap
 RUN dnf update -y
 RUN dnf install -y git nodejs npm python gcc-c++
