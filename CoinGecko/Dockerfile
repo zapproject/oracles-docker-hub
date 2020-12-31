@@ -1,12 +1,12 @@
 #pull base image
 FROM fedora
 
-WORKDIR /usr/src/zap
+WORKDIR /zap
 RUN dnf update -y
 RUN dnf install -y git nodejs npm python gcc-c++
 RUN git clone https://github.com/zapproject/zap-oracle-template.git
-WORKDIR zap-oracle-template
-COPY Config.json /usr/src/zap/zap-oracle-template/Oracle
-RUN npm install node-binance-api bluebird
+COPY Responder.ts /zap/zap-oracle-template/Oracle/
+WORKDIR /zap/zap-oracle-template 
+RUN npm install node-binance-api bluebird coingecko-api
 RUN npm install
 CMD ["npm","start"]

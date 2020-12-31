@@ -1,0 +1,25 @@
+{
+	"title": "Signals",
+	"public_key": "",
+	"NODE_URL": "wss://kovan.infura.io/ws/v3/{PROJECT_ID}",
+	"mnemonic": "",
+	"EndpointSchema": {
+		"name": "btcprice",
+		"curve": [
+			2,
+			1,
+			2,
+			100000
+		],
+		"broker": "",
+		"md": "CoinGecko prices oracle",
+		"queryList": [
+			{
+				"query": "<pair>",
+				"params": [],
+				"dynamic": false,
+				"responseType": "[int]"
+			}
+		]
+	}
+}
